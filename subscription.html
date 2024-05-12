@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}
+Subscription Page
+{% endblock %}
+{% block content %}
+<div class="login-container">
+    <h2>Choose Your Broadband Plan</h2>
+    <form action="/save_plan" method="post">
+        <input type="hidden" name="user_id" value="{{ user_id }}">
+        <label for="plan">Select Plan:</label>
+        <select id="plan" name="plan">
+            <option></option>
+            <option value="basic">Basic Plan</option>
+            <option value="standard">Standard Plan</option>
+            <option value="premium">Premium Plan</option>
+        </select>
+        <br><br>
+        <label for="duration">Select Duration:</label>
+        <select id="duration" name="duration">
+            <option></option>
+            <option value="1_month">1 Month</option>
+            <option value="3_months">3 Months</option>
+            <option value="6_months">6 Months</option>
+            <option value="12_months">12 Months</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+        <h3>If already having subscription view details: </h3>
+        <a href="{{ url_for('sub_detail') }}" class="button-link">Details</a>
+    </form>
+</div>
+{% endblock %}

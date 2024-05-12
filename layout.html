@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="navbar">
+
+        <a href="{{ url_for('add_customer') }}" class="navbar-brand">Register</a>
+        <a href="{{ url_for('login') }}" class="navbar-brand">Login</a>
+        <a href="{{ url_for('view') }}" class="navbar-brand">View</a>
+
+
+
+
+    </div>
+
+
+    {% block content %}
+    {% endblock %}
+
+
+</body>
+
+</html>

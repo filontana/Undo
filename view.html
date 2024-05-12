@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title %}
+Home Page
+{% endblock %}
+{% block content %}
+<div class="center">
+    <h2>Customer Information</h2>
+    <table class="customer-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Customer Name</th>
+                <th>Customer Mobile</th>
+                <th>Customer Email</th>
+                <th>Customer Type</th>
+                <th>Customer City</th>
+                <th>Password</th>
+                <th>User ID</th> <!-- Added column for user_id -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{row["id"]}}</td>
+                <td>{{row["name"]}}</td>
+                <td>{{row["mobile"]}}</td>
+                <td>{{row["CustomerEmail"]}}</td>
+                <td>{{row["CustomerType"]}}</td>
+                <td>{{row["CustomerCity"]}}</td>
+                <td>{{row["Password"]}}</td>
+                <td>{{row["user_id"]}}</td> <!-- Displaying user_id -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{{ url_for('delete') }}" class="button-link">Delete</a>
+    <a href="{{ url_for('edit') }}" class="button-link">Edit</a>
+</div>
+{% endblock %}

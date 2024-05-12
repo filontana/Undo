@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block title %}
+Edit Customer
+{% endblock %}
+{% block content %}
+<h2>Edit Customer Record</h2>
+{% if row %}
+<form action="/editedrecord" method="POST">
+    <input type="hidden" name="id" value="{{ row['id'] }}">
+
+    <label for="CustomerName">Customer Name</label>
+    <input type="text" id="CustomerName" name="CustomerName" value="{{ row['name'] }}" required autocomplete="name"><br>
+
+    <label for="CustomerMobile">Customer Mobile</label>
+    <input type="tel" id="CustomerMobile" name="CustomerMobile" value="{{ row['mobile'] }}" required
+        autocomplete="tel"><br>
+
+    <label for="user_id">User ID</label>
+    <input type="text" id="user_id" name="user_id" value="{{ row['user_id'] }}" required autocomplete="user_id"><br>
+
+    <label for="CustomerEmail">Customer Email</label>
+    <input type="email" id="CustomerEmail" name="CustomerEmail" value="{{ row['CustomerEmail'] }}" required
+        autocomplete="email"><br>
+
+    <label for="CustomerType">Customer Type</label>
+    <select id="CustomerType" name="CustomerType" autocomplete="CustomerType">
+        <option {% if row['CustomerType']=='Regular' %} selected {% endif %}>Regular</option>
+        <option {% if row['CustomerType']=='New' %} selected {% endif %}>New</option>
+    </select><br>
+
+    <label for="CustomerCity">Customer City</label>
+    <input type="text" id="CustomerCity" name="CustomerCity" value="{{ row['CustomerCity'] }}" required
+        autocomplete="address-level2"><br>
+
+    <label for="Password">Password</label>
+    <input type="password" id="Password" name="Password" value="{{ row['Password'] }}" required
+        autocomplete="new-password"><br>
+
+    <input type="submit" value="Submit">
+</form>
+{% else %}
+<p>No customer records found.</p>
+{% endif %}
+{% endblock %}

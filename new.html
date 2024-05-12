@@ -1,0 +1,14 @@
+{%extends "layout.html"%}
+{% block title %}
+new page
+{% endblock %}
+{% block content%}
+<div>
+    <h1>New Page</h1>
+    {% if msg %}
+    <p>{{ msg }}</p>
+    {% else %}
+    <p>No message</p>
+    {% endif %}
+</div>
+{% endblock %}

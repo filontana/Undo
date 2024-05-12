@@ -1,0 +1,15 @@
+{%extends "layout.html"%}
+{% block title %}
+Register Page
+{% endblock %}
+{% block content%}
+<div class="center2">
+    <h2>Delete Record</h2>
+    <form action="/deleterecord" method="post">
+        <label for="id">Enter ID of the record to delete:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <input type="submit" value="Delete">
+    </form>
+</div>
+
+{% endblock %}

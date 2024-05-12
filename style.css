@@ -1,0 +1,136 @@
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.center2 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #36454F;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #36454F;
+    line-height: 1.2;
+    font-weight: 470;
+    font-size: 60px;
+}
+
+.navbar {
+    background-color: #778ba5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 34px;
+    font-size: 0.7em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    padding: 8px 5px 8px 5px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-brand {
+    font-variant: small-caps;
+    margin-left: 30px;
+    font-size: 2.0em;
+}
+
+form {
+    width: 300px;
+    margin: auto;
+}
+
+input[type=text],
+[type=tel],
+[type=password],
+[type=email],
+select {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=submit],
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.customer-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.customer-table td,
+.customer-table th {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.customer-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.customer-table tr:hover {
+    background-color: #ddd;
+}
+
+.customer-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container {
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f2f5f3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
